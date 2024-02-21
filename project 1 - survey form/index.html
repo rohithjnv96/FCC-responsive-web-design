@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title"> Blogosphere Survey Form</h1>
+            <p id="description">Thanks for taking time to help us improve your experience with us</p>
+        </header>
+        <form id="survey-form" action="" mathod="POST">
+            <fieldset class="fields">
+                <label id="name-label">Name:
+                    <input id="name" type="text" placeholder="Your Name" required />
+                </label>
+                <label id="email-label">Email:
+                    <input id="email" type="email" placeholder="Your email" required />
+                </label>
+                <label id="number-label">Age <em>(optional)</em>:
+                    <input id="number" type="number" min="18" max="125" placeholder="Age" />
+                </label>
+                <label id="dd">State
+                    <select id="dropdown" name="state">
+                        <option value="">Prefer not to say</option>
+                        <option value="NSW">NSW</option>
+                        <option value="VIC">VIC</option>
+                        <option value="QLD">QLD</option>
+                        <option value="WA">WA</option>
+                        <option value="SA">SA</option>
+                    <select>
+                </label>
+            </fieldset>
+            <fieldset class="fields-2">
+                <label class="questions">Would you like to recieve promotional email from us <em>(weekly)</em>:
+                    <label class="is-label">
+                        <input name="promo" type="radio" value="yes" checked> Yes
+                    </label>
+                    <label class="is-label">
+                        <input name="promo" type="radio" value="no"> No
+                    </label>
+                </label>
+                <label class="questions">
+                    Would you recommend our service to a friend/family:
+                    <label class="is-label">
+                        <input type="radio" name="recom" value="definitely"> Definitely
+                    </label>
+                    <label class="is-label">
+                        <input type="radio" name="recom" value="maybe"> Maybe
+                    </label>
+                    <label class="is-label">
+                        <input type="radio" name="recom" value="notsure"> Not sure
+                    </label>
+                </label>
+                <label class="questions">
+                    Which feature in our website do you like the most
+                    <label class="is-label">
+                        <input type="checkbox" name="liked-features" value="speeech-to-text"> Speech to Text
+                    </label>
+                    <label class="is-label">
+                        <input type="checkbox" name="liked-features" value="edit-post"> Edit post feature
+                    </label>
+                    <label class="is-label">
+                        <input type="checkbox" name="liked-features" value="security"> Security Features
+                    </label>
+                    <label class="is-label">
+                        <input type="checkbox" name="liked-features" value="comment-section"> Comment Section
+                    </label>
+                </label>
+                <label class="questions">
+                    Any comments or suggestions?
+                    <textarea rows="4" cols"20"></textarea>
+                </label>
+            </fieldset>
+            <input id="submit" type="submit">
+        </form>
+    </div>
+</body>
+
+</html>
