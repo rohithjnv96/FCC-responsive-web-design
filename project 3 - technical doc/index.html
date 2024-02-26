@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Documentation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav id="navbar">
+    <header>
+      <h1>Python Documentation</h1>
+    </header>
+    <a class="nav-link" href="#python_introduction"> Python Introduction</a>
+    <a class="nav-link" href="#python_comments"> Python Comments</a>
+    <a class="nav-link" href="#python_variables"> Python Variables</a>
+    <a class="nav-link" href="#python_data_types"> Python Data Types</a>
+    <a class="nav-link" href="#python_operators"> Python Operators</a>
+    <a class="nav-link" href="#references"> References</a>
+  </nav>
+  <main id="main-doc">
+    <section id="python_introduction" class="main-section">
+      <header>
+        <h1>Python Introduction</h1>
+      </header>
+      <div class="content">
+        <h2>What is Python?</h2>
+        <section>
+          <p>Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.
+            It is used for:
+          <ul>
+            <li>web development (server-side)</li>
+            <li>software development</li>
+            <li>mathematics</li>
+            <li>system scripting</li>
+          </ul>
+          </p>
+        </section>
+        <h2>Why Python?</h2>
+        <section>
+          <p>
+            <ul>
+              <li> Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc). </li>
+              <li> Python has a simple syntax similar to the English language. </li>
+              <li> Python has syntax that allows developers to write programs with fewer lines than some other programming
+                languages. </li>
+              <li> Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This
+                means that prototyping can be very quick. </li>
+              <li> Python can be treated in a procedural way, an object-oriented way or a functional way. </li>
+            </ul>
+            </p>
+        </section>
+        <h2>Python Syntax compared to other programming languages</h2>
+        <section><ul>
+          <li> Python was designed for readability, and has some similarities to the English language with influence
+            from mathematics. </li>
+          <li> Python uses new lines to complete a command, as opposed to other programming languages which often use
+            semicolons or parentheses. </li>
+          <li> Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions
+            and classes. Other programming languages often use curly-brackets for this purpose. </li>
+        </ul>
+        <p class="p-code">
+          Example:
+          <code class="intro-code">print("Hello, World!")</code>
+        </p>
+      </section>
+      </div>
+    </section>
+    <section id="python_comments" class="main-section">
+      <header>
+        <h1>Python Comments</h1>
+      </header>
+      <div class="content">
+        <h2>Creating a Comment</h2>
+        <section>
+          <p>Comments starts with a #, and Python will ignore them:
+            <div class="p-code">
+              <code>#This is a comment <br>
+                print("Hello, World!")</code>
+            </div>
+          </p>
+        </section>
+        <h2>Multiline Comments</h2>
+        <section>
+          <p>Python does not really have a syntax for multiline comments.
+            To add a multiline comment you could insert a # for each line:
+            <div class="p-code">
+              <code>#This is a comment <br>
+                #written in <br>
+                #more than just one line<br>
+                print("Hello, World!")
+              </code>
+            </div>
+            <p>Or, not quite as intended, you can use a multiline string.
+              <br>Since Python will ignore string literals that are not assigned to a variable, you can add a multiline
+              string (triple quotes) in your code, and place your comment inside it:</p>
+            <div class="p-code">
+                <code>
+                """ <br>
+                This is a comment <br>
+                written in <br>
+                more than just one line <br>
+                """ <br>
+                print("Hello, World!")
+              </code>
+            </div>
+          </p>
+          <p>As long as the string is not assigned to a variable, Python will read the code, but then ignore it, and you
+            have made a multiline comment.</p>
+        </section>
+      </div>
+    </section>
+    <section id="python_variables" class="main-section">
+      <header>
+        <h1>Python Variables</h1>
+      </header>
+      <div class="content">
+        <h2>Creating Variables</h2>
+        <section>
+          <p>Python has no command for declaring a variable.</p>
+          <p>A variable is created the moment you first assign a value to it.</p>
+          <p class="p-code">Example
+            <code>x = 5 <br>
+              y = "John"<br>
+              print(x)<br>
+              print(y)</code>
+        </p>
+        </section>
+        <h2>Casting</h2>
+        <section>
+          <p>If you want to specify the data type of a variable, this can be done with casting.</p>
+          <p class="p-code">Example:
+            <code>
+              x = str(3)    # x will be '3' <br>
+              y = int(3)    # y will be 3 <br>
+              z = float(3)  # z will be 3.0
+            </code>
+          </p>
+        </section>
+      </div>
+    </section>
+    <section id="python_data_types" class="main-section">
+      <header>
+        <h1>Python Data Types</h1>
+      </header>
+      <div class="content">
+        <h2>Built-in Data Types</h2>
+        <section>
+          <p>In programming, data type is an important concept.</p>
+          <p>Variables can store data of different types, and different types can do different things.</p>
+          <p>Python has the following data types built-in by default, in these categories:</p>
+          <table>
+            <thead>
+              <th>Category</th>
+              <th>Name</th>
+            </thead>
+            <tr>
+              <td>Text Type:</td>
+              <td>str</td>
+            </tr>
+            <tr class="alt-cell">
+              <td>Numeric Types:</td>
+              <td>int, float, complex</td>
+            </tr>
+            <tr>
+              <td>Sequence Types:</td>
+              <td>list, tuple, range</td>
+            </tr>
+            <tr class="alt-cell">
+              <td>Mapping Type:</td>
+              <td>dict</td>
+            </tr>
+            <tr>
+              <td>Set Types:</td>
+              <td>set, frozenset</td>
+            </tr>
+            <tr class="alt-cell">
+              <td>Boolean Type:</td>
+              <td>bool</td>
+            </tr>
+            <tr>
+              <td>Binary Types:</td>
+              <td>bytes, bytearray, memoryview</td>
+            </tr>
+            <tr class="alt-cell">
+              <td>None Type:</td>
+              <td>NoneType</td>
+            </tr>
+          </table>
+        </section>
+        <h2>Getting the Data Type</h2>
+        <section>
+          <p>You can get the data type of any object by using the type() function:</p>
+          <p class="p-code">Example:
+            <code>
+              x = 5 <br> 
+              print(type(x)) <br>
+            </code>
+          </p>
+        </section>
+      </div>
+    </section>
+    <section id="python_operators" class="main-section">
+      <header>
+        <h1>Python Operators</h1>
+      </header>
+      <div class="content">
+        <h2>Python Operators</h2>
+        <section>
+          <p>Operators are used to perform operations on variables and values.</p>
+          <p>Python divides the operators in the following groups:
+            <ul>
+              <li> Arithmetic operators </li>
+              <li> Assignment operators </li>
+              <li> Comparison operators </li>
+              <li> Logical operators </li>
+              <li> Identity operators </li>
+              <li> Membership operators </li>
+              <li> Bitwise operators </li>
+          </ul>
+          </p>
+        </section>
+        <h2>Python Arithmetic Operators</h2>
+        <section>
+          <p>Arithmetic operators are used with numeric values to perform common mathematical operations:</p>
+          <table>
+            <tr>
+              <th>Operator</th>
+              <th>Name</th>
+              <th>Example</th>
+            </tr>
+            <tr>
+              <td>+</td>
+              <td>Addition</td>		
+              <td>x + y</td>
+            </tr>
+            <tr class="alt-cell">
+              <td>-</td>
+              <td>Subtraction</td>		
+              <td>x - y</td>
+            </tr>
+            <tr>
+              <td>*</td>
+              <td>Multiplication</td>		
+              <td>x * y</td>
+            </tr>
+            <tr class="alt-cell">
+              <td>/</td>
+              <td>Division</td>		
+              <td>x / y</td>
+            </tr>
+            <tr>
+              <td>%</td>
+              <td>Modulus</td>		
+              <td>x % y</td>
+            </tr>
+            <tr class="alt-cell">
+              <td>**</td>
+              <td>Exponentiation</td>		
+              <td>x ** y</td>
+            </tr>
+            <tr>
+              <td>//</td>
+              <td>Floor division</td>		
+              <td>x // y</td>
+            </tr>
+          </table>
+        </section>
+        <h2>Python Assignment Operators</h2>
+        <section>
+          <table>
+            <tr>
+              <th>Operator</th>
+              <th>Example</th>
+              <th>Same As</th>
+            </tr>
+            <tr>
+              <td>=</td>
+              <td>x = 5</td>
+              <td>x = 5</td>
+            </tr>
+            <tr class="alt-cell">
+              <td>+=</td>
+              <td>x += 3</td>
+              <td>x = x + 3</td>
+            </tr>
+            <tr>
+              <td>-=</td>
+              <td>x -= 3</td>
+              <td>x=x-3</td>
+            </tr>
+            <tr class="alt-cell">
+              <td>*=</td>
+              <td>x*= 3</td>
+              <td>x=x* 3</td>
+            </tr>
+            <tr>
+              <td>/=</td>
+              <td>x /= 3</td>
+              <td>x=x/3</td>
+            </tr>
+            <tr class="alt-cell">
+              <td>%=</td>
+              <td>x %= 3</td>
+              <td>x = x % 3</td>
+            </tr>
+            <tr>
+              <td>//=</td>
+              <td>x //= 3</td>
+              <td>x=x//3</td>
+            </tr>
+            <tr class="alt-cell">
+              <td>**=</td>
+              <td>x**= 3</td>
+              <td>x=x**3</td>
+            </tr>
+            <tr>
+              <td>&=</td>
+              <td>x&= 3</td>
+              <td>x=x&3</td>
+            </tr>
+            <tr class="alt-cell">
+              <td>|=</td>
+              <td>x |= 3</td>
+              <td>x =x|3</td>
+            </tr>
+            <tr>
+              <td>^=</td>
+              <td>x^= 3</td>
+              <td>x =x^ 3</td>
+            </tr>
+            <tr class="alt-cell">
+              <td>>>=</td>
+              <td>x >>= 3</td>
+              <td>x = x>> 3</td>
+            </tr>
+            <tr>
+              <td><<=</td>
+              <td>x <<= 3</td>
+              <td>x = x<< 3</td>
+            </tr>
+          </table>
+        </section>
+      </div>
+    </section>
+    <section id="references" class="main-section">
+      <header>
+        <h1>References</h1>
+      </header>
+      <div class="content">
+        <section>
+          <p>All information is taken from <a href="https://www.w3schools.com/python/default.asp">here</a></p>
+          <p>For official python documentation, please visit <a href="https://docs.python.org/3/">here</a></p>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
