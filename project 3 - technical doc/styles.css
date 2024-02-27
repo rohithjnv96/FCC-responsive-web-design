@@ -7,7 +7,7 @@ html {
     scroll-behavior: smooth;
 }
 
-*, *:before, *:after {
+*, *::before, *::after {
     box-sizing: inherit;
     font-family: inherit;
     margin: inherit;
